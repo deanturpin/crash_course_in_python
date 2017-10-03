@@ -126,5 +126,77 @@ elif not age > 20 :
 # Loops
 for x in range(0, 10) : print(x, end=" "); print("hello")
 for x in things : print(x)
-for x in (1,2,3,4) : print(x, end=",\n")
+for x in [1,2,3,4] : print(x, end=",\n")
 for x in range(1,4) : print(x, end=",\n")
+for x in range(1,4,2) : print(x, end=",\n")
+
+
+## List of lists
+num_list = [[1,2,3],[4,5,6]]
+
+for x in num_list : 
+  for y in x :
+    print(y)
+
+# Random
+import random
+
+random_number = random.randrange(0,10)
+print("random", random_number)
+
+# Functions
+
+def blah(num1, num2) :
+  return num1 + num2
+
+print(blah(1, 2))
+
+# Strings
+long_string = "The quick brown fox jumped over the lazy goat"
+
+print(long_string[0:10])
+print(long_string[-15:-10])
+print(long_string.capitalize())
+print(long_string.find(" "))
+print(long_string.strip())
+print(list(long_string.strip()))
+
+test_file = open("blah.txt", "bw")
+print(test_file.mode)
+print(test_file.name)
+test_file.write(bytes("Don't look at the finger\n", "UTF-8"))
+test_file.close()
+
+test_file = open("blah.txt", "r+")
+print(test_file.read())
+
+# Classes
+class Animal:
+
+  # Does underscore really make them private?
+  __name = ""
+  __height = 0
+  __weight = 0
+  __sound = 0
+
+  # Constructor
+  def __init__(self, name) :
+    self.__name = name
+
+  def set_name(self, name) :
+    self.__name = name
+
+  def get_name(self, name) :
+    return self.__name
+
+  def get_type(self) : 
+    print("Animal")
+
+  def toString(self):
+    return "I am {}".format(self.__name)
+
+# Create an instance
+cat = Animal("Kenny")
+cat.get_type()
+
+print(cat.toString())
