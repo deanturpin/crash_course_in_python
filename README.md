@@ -23,8 +23,11 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
-# References
+# Resources
 * https://en.wikipedia.org/wiki/Zen_of_Python
 * https://en.wikipedia.org/wiki/Duck_typing
 * http://redmonk.com/sogrady/2017/06/08/language-rankings-6-17/
 * http://pypl.github.io/PYPL.html
+
+## Screen scraping
+* http://docs.python-guide.org/en/latest/scenarios/scrape/
